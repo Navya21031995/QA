@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="warn">
+		<Properties>
+			<!-- 	location for folder for logs -->
+			<Property name="basePath">logs</Property>
+		</Properties>
+
+	<Appenders>
+					<!-- Console appender configuration -->
+	        <Console name="Console" target="SYSTEM_OUT">
+	            <PatternLayout pattern="%d{yyyy-MM-dd HH:mm:ss} %-5p %c{1}:%L - %m%n" />
+	        </Console>
+					<!-- 	give file name -->
+			<RollingFile name="MyFile" fileName="${basePath}/Figbytes.html"	filePattern="${basePath}/Figbytes-%d{yyyy-MM-dd}.html">				
+			<HTMLLayout charset="UTF-8" title="logs" locationInfo="true" />			
+			<Policies>
+                <OnStartupTriggeringPolicy />            									<!-- Causes a rollover if the log file is older than the current JVM's start time -->                
+				<TimeBasedTriggeringPolicy interval="1" modulate="true" />                  <!-- Causes a rollover once the date/time pattern no longer applies to the active file -->             
+  				<SizeBasedTriggeringPolicy size="10MB" />  
+			</Policies>			
+			
+			<!-- Max 10 files will be created everyday -->
+<!-- 			<DefaultRolloverStrategy max="10"> -->
+<!-- 				<Delete basePath="${basePathr}" maxDepth="10"> -->
+<!-- 					Delete all files older than 30 days -->
+<!-- 					<IfLastModified age="30d" /> -->
+<!-- 				</Delete> -->
+<!-- 			</DefaultRolloverStrategy>			 -->
+		</RollingFile>
+        
+<!--         <SMTP name="LogToMail" subject="Error Log From Log4j" -->
+<!--               from="vchaudhary203@gmail.com" -->
+<!--               to="chaudhary.vaishalichaudhary@gmail.com" -->
+<!--               smtpHost="smtp.mailgun.org" -->
+<!--               smtpPort="25" -->
+<!--               smtpUsername="abc" -->
+<!--               smtpPassword="123" -->
+<!--               bufferSize="100"> -->
+<!--         </SMTP> -->
+	</Appenders>
+	
+	<Loggers>
+		<Root level="trace">
+			<AppenderRef ref="MyFile"/>
+			<AppenderRef ref="Console"/>
+		</Root>
+	</Loggers>
+</Configuration>

@@ -1,0 +1,5 @@
+[INFO ] 2022-02-21 11:14:08.313 [main] BaseClass - <><><><><> Before suite<><><><><>
+[INFO ] 2022-02-21 11:14:13.591 [main] BaseClass - 
+   Browser is running----  
+ChromeDriver: chrome on WINDOWS (2d7747a582d5ce1c9f26239d79aba7fe)
+[INFO ] 2022-02-21 11:14:21.593 [main] LoginPageTest - Reading login credentials from excel using logger

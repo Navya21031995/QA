@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite parallel="classes" name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" parallel="classes" name="Test(failed)">
+    <classes>
+      <class name="com.figbytes.Test.Administration_DataRejection_Test">
+        <methods>
+          <include name="contributor"/>
+          <include name="AdminlogoutTest"/>
+          <include name="verifyStatusValue"/>
+          <include name="contributorLogOut"/>
+          <include name="beforeSuite"/>
+          <include name="ReloginContributorTest"/>
+          <include name="afterSuite"/>
+          <include name="loginContributorTest"/>
+          <include name="contributorDataProcess"/>
+          <include name="contributorReLogOut"/>
+          <include name="loginTest"/>
+        </methods>
+      </class> <!-- com.figbytes.Test.Administration_DataRejection_Test -->
+      <class name="com.figbytes.Test.Administration_DataApproval_Test">
+        <methods>
+          <include name="loginContributorTest"/>
+          <include name="ReloginContributorTest"/>
+          <include name="AdminlogoutTest"/>
+          <include name="verifyStatusValue"/>
+          <include name="beforeSuite"/>
+          <include name="afterSuite"/>
+          <include name="contributor"/>
+          <include name="contributorReLogOut"/>
+          <include name="loginTest"/>
+          <include name="contributorDataProcess"/>
+          <include name="contributorLogOut"/>
+        </methods>
+      </class> <!-- com.figbytes.Test.Administration_DataApproval_Test -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->
